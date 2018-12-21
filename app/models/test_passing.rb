@@ -1,0 +1,2 @@
+class TestPassing < ApplicationRecord
+end
