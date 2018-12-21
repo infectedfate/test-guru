@@ -1,6 +1,12 @@
 class Test < ApplicationRecord
-end
+  belongs_to :category
+  has_many :questions
+  has_many :users
+  has_many :test_passings
 
-def self.titles_by_category(title)
-  by_category(title).order(title: :desc).pluck(:title)
+  class << self
+   def tests_in_category(title)
+     joins(:category).where(categories: { title: title}).order(id: :asc).pluck(:title)
+   end
+ end
 end
