@@ -20,7 +20,7 @@ class Test < ApplicationRecord
   scope :hard, -> { by_level(5..Float::INFINITY) }
   scope :by_category, ->(category_name) { joins(:category).where(categories: { title: category_name }) }
 
-  def self.by_category(category_name)
-    by_category(category_name).order(id: :asc).pluck(:title)
+  def self.titles_by_category(category_name)
+    by_category(category_name).order(title: :desc).pluck(:title)
   end
 end
