@@ -6,7 +6,8 @@ class Test < ApplicationRecord
   has_many :users, through: :tests_users
 
   validates :title, presence: true, uniqueness: {
-    scope: :level
+    scope: :level,
+    message: "Title and must be unique on this level"
   }
   validates :level, numericality: {
     only_integer: true,
