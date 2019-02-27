@@ -12,5 +12,4 @@ class Answer < ApplicationRecord
   def answers_count
     errors.add(:question) if question.answers.count >= MAX_ANSWERS
   end
-
 end
