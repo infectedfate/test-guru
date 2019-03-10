@@ -1,16 +1,6 @@
-<h1>Create new test</h1>
-
 <%= form_with model: @test, local: true do |form| %>
-<% if @test.errors.present? %>
-  <div>
-    <h2><%= pluralize(@test.errors.count, 'error') %> detected:</h2>
-    <ul>
-      <% @test.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
-  <% end %>
+  <%= render 'shared/errors', resource: @test %>
+
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title, id: :test_title %>
