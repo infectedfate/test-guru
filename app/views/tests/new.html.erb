@@ -1,30 +1,3 @@
 <h1>Create new test</h1>
 
-<%= form_with model: @test, local: true do |form| %>
-<% if @test.errors.present? %>
-  <div>
-    <h2><%= pluralize(@test.errors.count, 'error') %> detected:</h2>
-    <ul>
-      <% @test.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
-  <% end %>
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title, id: :test_title %>
-  </p><br>
-
-  <p>
-    <%= form.label :level %><br>
-    <%= form.number_field :level, id: :test_level %>
-  </p>
-
-  <p>
-    <%= form.label :category_id %>:
-    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
-  </p>
-
-  <p><%= form.submit %></p>
-<% end %>
+<%= render 'form' %>
