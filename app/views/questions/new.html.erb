@@ -1,13 +1,4 @@
 <h1>Create new question</h1>
 
-<form action="/questions" method="post">
-  <p>
-    <label for="question-body">Body:</label>
-    <input type="text" name="question[body]" id="question-body">
-  </p><br>
-
-  <p>
-    <label for="question-test_id">TestID</label>\
-    <input type="text" name="question[test_id]" id="question-test_id">
-  </p>
-</form>
+<%= render 'form' %>
+<%= link_to 'Back', tests_path %>

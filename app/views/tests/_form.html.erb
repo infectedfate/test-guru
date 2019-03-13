@@ -12,9 +12,14 @@
   </p>
 
   <p>
+    <%= form.label :author_id %>
+    <%= form.number_field :author_id, id: :tests_users %>
+  </p>
+
+  <p>
     <%= form.label :category_id %>:
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
   </p>
 
-  <p><%= form.submit %></p>
+  <p> <%= form.submit %> </p>
 <% end %>

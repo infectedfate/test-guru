@@ -4,8 +4,10 @@ class QuestionsController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :question_not_found
 
+  def index
+  end
+
   def show
-    @questions = Questions(params[:id])
   end
 
   def new
@@ -19,6 +21,10 @@ class QuestionsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @question = Question.find(params[:id])
   end
 
   def destroy
@@ -38,7 +44,7 @@ class QuestionsController < ApplicationController
   end
 
   def find_test
-    @test = Test.find(params[:test_id])
+    @test = Test.find(params[:id])
   end
 
   def find_question
