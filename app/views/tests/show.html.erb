@@ -1,3 +1,6 @@
+
+<%= link_to 'Создать вопрос', new_test_question_path(@test) %>
+
 <p>
   <strong>Title:</strong>
   <%= @test.title %>
@@ -6,6 +9,11 @@
 <p>
   <strong>Level:</strong>
   <%= @test.level %>
+</p>
+
+<p>
+  <strong>Список вопросов:</strong>
+  <%= render @test.questions %>
 </p>
 
 <%= link_to 'Edit', edit_test_path(@test) %>

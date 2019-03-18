@@ -36,7 +36,7 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit(:body)
+    params.require(:question).permit(:body, :test_id)
   end
 
   def question_not_found
