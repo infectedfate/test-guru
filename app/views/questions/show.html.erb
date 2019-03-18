@@ -1,7 +1,8 @@
+<%= question_header(question) %>
 <p>
   <strong>Body:</strong>
   <%= @question.body %>
 </p>
 
-<%= link_to 'Edit', edit_question_path(@question) %>
-<%= link_to 'Back', test_path %>
+<%= link_to 'Редактировать', edit_question_path(@question) %>
+<%= link_to 'Назад', test_path %>

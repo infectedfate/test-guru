@@ -1,15 +1,8 @@
-<h1>Questions</h1>
+<h1>Вопросы</h1>
 
 <p>
-  <%= link_to 'New question', new_test_question %>
+  <%= link_to 'Создать вопрос', new_test_question_path %>
 </p>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Level</th>
-    <th colspan="3">Actions</th>
-  </tr>
+<%= render @questions %>
 
-  <%= render @questions %>
-</table>
