@@ -1,13 +1,13 @@
 class TestsController < ApplicationController
-  rescue_from ActiveRecord::RecordNotFound, with: :test_not_found
+  before_action :find_test, only: %i[create new]
 
+  rescue_from ActiveRecord::RecordNotFound, with: :test_not_found
 
   def index
     @tests = Test.all
   end
 
   def show
-    @test = Test.find(params[:id])
   end
 
   def new
@@ -15,7 +15,6 @@ class TestsController < ApplicationController
   end
 
   def edit
-    @test = Test.find(params[:id])
   end
 
   def create
@@ -29,7 +28,7 @@ class TestsController < ApplicationController
   end
 
   def update
-    @test = Test.find(params[:id])
+    find_test
 
     if @test.update(test_params)
       redirect_to @test
@@ -39,12 +38,15 @@ class TestsController < ApplicationController
   end
 
   def destroy
-    @test = Test.find(params[:id])
     @test.destroy
     redirect_to tests_path
   end
 
   private
+
+  def find_test
+    @test = Test.find(params[:id])
+  end
 
   def test_not_found
     render plain: 'Тест не существует.'

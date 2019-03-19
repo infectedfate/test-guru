@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[create new]
+  before_action :set_test, only: %i[create new]
   before_action :find_question, only: %i[edit show destroy update]
 
   rescue_from ActiveRecord::RecordNotFound, with: :question_not_found
@@ -24,11 +24,9 @@ class QuestionsController < ApplicationController
   end
 
   def edit
-    @question = Question.find(params[:id])
   end
 
   def destroy
-    @question = Question.find(params[:id])
     @question.destroy
     redirect_to tests_questions_path
   end
@@ -43,7 +41,7 @@ class QuestionsController < ApplicationController
     render plain: 'Вопрос не существует.'
   end
 
-  def find_test
+  def set_test
     @test = Test.find(params[:id])
   end
 
