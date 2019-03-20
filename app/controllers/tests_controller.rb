@@ -41,15 +41,15 @@ class TestsController < ApplicationController
   end
 
   private
-
-  def find_test
+  
+    def find_test
     @test = Test.find(params[:id])
   end
 
   def test_not_found
     render plain: 'Тест не существует.'
   end
-
+  
   def test_params
     params.require(:test).permit(:title, :level, :category_id)
   end
