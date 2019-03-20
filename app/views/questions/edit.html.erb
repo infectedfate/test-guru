@@ -1,3 +1,7 @@
+<%= question_header(question) %>
+<%= render 'form' %>
+<%= link_to 'Назад', question_path %>
+
 <h1>Create new test</h1>
 
 <%= form_with model: @test, local: true do |form| %>
