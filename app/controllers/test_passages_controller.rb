@@ -1,0 +1,2 @@
+class TestPassagesController < ApplicationController
+end
