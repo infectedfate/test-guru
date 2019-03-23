@@ -6,6 +6,9 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :mail, presence: true
 
+  def test_passage(test)
+    test_passages.order(id: :desc).find_by.(test_id: test.id)
+  end
 
   def tests_by_level(level)
     Test.joins(:tests_users).where(tests_users: { user_id: id }, tests: { level: level })
