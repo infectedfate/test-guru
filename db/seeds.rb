@@ -22,7 +22,3 @@ questions = Question.create(
    { body: 'Python question #1', test_id: tests[3].id }]
 )
 
-TestsUser.create(
-  [{ user_id: users[0], test_id: tests[0] },
-   { user_id: users[1], test_id: tests[1] }]
-)
