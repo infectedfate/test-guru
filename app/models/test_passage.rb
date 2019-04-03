@@ -1,9 +1,11 @@
 class TestPassage < ApplicationRecord
+  SUCCESS_PERSENT = 85
+
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question'
 
-  before_validation :before_validation_set_first_question, on: :create
+  before_validation :before_validation_set_current_question, on: :create, :update
 
   def accept!(answer_ids)
     if correct_answer(answer_ids)
@@ -17,11 +19,19 @@ class TestPassage < ApplicationRecord
   def completed?
     current_question.nil?
   end
+
+  def correct_answers_percent
+    (correct_answers.to_f / test.questions.count.to_f) * 100
+  end
+
+  def successfully_completed?
+    correct_answers_percent >= SUCCESS_PERSENT
+  end
   
   private
 
-  def before_validation_set_first_question
-    self.current_question = test.questions.first if test.present?
+  def before_validation_set_current_question
+    self.current_question = next_question
   end
 
   def correct_answer?(answer_ids)
@@ -38,5 +48,12 @@ class TestPassage < ApplicationRecord
   def next_question
     test.questions.order(:id).where('id > ?', current_question.id).first
   end
+
+  def next_question
+    test.questions
+        .order(:id)
+        .where('id > ?', current_question.nil? ? 0 : current_question.id).first
+  end
+  
   
 end
