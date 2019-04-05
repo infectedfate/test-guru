@@ -1,11 +1,12 @@
 class TestPassage < ApplicationRecord
+
   SUCCESS_PERSENT = 85
 
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question'
 
-  before_validation :before_validation_set_current_question, on: :create, :update
+  before_validation :before_validation_set_current_question, on: %i[create update]
 
   def accept!(answer_ids)
     if correct_answer(answer_ids)
@@ -54,6 +55,4 @@ class TestPassage < ApplicationRecord
         .order(:id)
         .where('id > ?', current_question.nil? ? 0 : current_question.id).first
   end
-  
-  
 end

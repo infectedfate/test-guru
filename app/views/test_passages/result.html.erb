@@ -1,3 +1,7 @@
 <h1>Test completed</h1>
-
-<h2><%= link_to t('Back'), tests_path %></h2>
+<%= if @test_passage.correct_answer_percent >= SUCCESS_PERCENT %>
+    <p class="green"> Процент правильных ответов: <%= @test_passage.correct_answer_percent %> </p>
+    <%else%>
+    <p class="red"> Процент правильных ответов: <%= @test_passage.correct_answer_percent %> </p>
+<% end %>
+<h2><%= link_to t('Назад'), tests_path %></h2>
