@@ -12,9 +12,6 @@ class TestPassage < ApplicationRecord
     if correct_answer(answer_ids)
       self.correct_questions += 1
     end
-
-    self.current_question = next_question
-    save!
   end
 
   def completed?
