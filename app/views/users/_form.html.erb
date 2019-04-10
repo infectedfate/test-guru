@@ -1,9 +1,8 @@
 <%= form_with model: @user, local: true do |form| %>
-  <%= render 'shared/errors', resource: @user %>
 
   <p>
-    <%= form.label :email %> <br>
-    <%= form.text_field :email, id: :user_mail %>
+    <%= form.label :mail %> <br>
+    <%= form.text_field :mail, id: :user_mail %>
   </p>
 
   <p>
