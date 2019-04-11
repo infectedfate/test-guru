@@ -1,7 +1,7 @@
 <%= form_with url: session_path, local: true do |form| %>
-  <%= # if flash[:alert] %>
-    <% # = content_tag :p, flash[:alert], class: 'flash alert' %>
-  <% # end %>
+  <%= if flash[:alert] %>
+    <% = content_tag :p, flash[:alert], class: 'flash alert' %>
+  <% end %>
 
   <p>
     <%= form.label :mail %><br>
