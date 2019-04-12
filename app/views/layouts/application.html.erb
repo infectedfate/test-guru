@@ -11,9 +11,9 @@
 
   <body>
     <% if logged_in? %>
-      <p class="nav user"> Welcome, <b> <%= curren_user.mail %> </b> Guru </p>
+      <p class="nav user"> Welcome, <b> <%= current_user.mail %> </b> Guru </p>
     <% end %>
     <%= yield %>
-    <%= render 'shared/footer'%>
+    <%= render 'shared/footer' %>
   </body>
 </html>
