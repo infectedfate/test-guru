@@ -1,6 +1,6 @@
-<%= form_with url: session_path, local: true do |form| %>
-  <%= if flash[:alert] %>
-    <% = content_tag :p, flash[:alert], class: 'flash alert' %>
+<%= form_with url: sessions_path, local: true do |form| %>
+  <% if flash[:alert] %>
+    <%= content_tag :p, flash[:alert], class: 'flash alert' %>
   <% end %>
 
   <p>
@@ -10,7 +10,7 @@
 
   <p>
   <%= form.label :password %><br>
-  <%= form.passwoed_field :password, id: :password %>
+  <%= form.password_field :password, id: :password %>
   </p>
 
   <p>
