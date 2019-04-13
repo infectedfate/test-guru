@@ -1,8 +1,8 @@
 class QuestionsController < ApplicationController
-  before_action :set_test, only: %i[create edit new]
+  before_action :set_test, only: %i[create new]
   before_action :set_question, only: %i[edit show destroy update]
 
-  rescue_from ActiveRecord::RecordNotFound, with: :question_not_found
+  #rescue_from ActiveRecord::RecordNotFound, with: :question_not_found
 
   def index
   end
@@ -37,12 +37,12 @@ class QuestionsController < ApplicationController
     params.require(:question).permit(:body, :test_id)
   end
 
-  def question_not_found
-    render plain: 'Вопрос не существует.'
-  end
+  #def question_not_found
+   # render plain: 'Вопрос не существует.'
+  #end
 
   def set_test
-    @test = Test.find(params[:id])
+    @test = Test.find(params[:test_id])
   end
 
   def set_question
