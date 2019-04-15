@@ -2,7 +2,7 @@ require 'digest/sha1'
 
 class User < ApplicationRecord
 
-  validates :email, uniqueness: true, format: { with: /.+@.+\..+/i }
+  validates :mail, uniqueness: true, format: { with: /.+@.+\..+/i }
   
   has_many :test_passages
   has_many :tests, through: :test_passages
