@@ -1,7 +1,7 @@
 class AnswersController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_question, only: %i[new create]
   before_action :set_answer, only: %i[show edit update destroy]
-
 
   def show
   end
@@ -14,12 +14,13 @@ class AnswersController < ApplicationController
   end
 
   def create
-    @answer = Answer.new(answer_params)
+    @answer = @question.answers.new(answer_params)
 
     if @answer.save
       redirect_to @answer, notice: 'Ответ успешно создан'
     else
       render :new
+    end
   end
 
   def update
@@ -27,6 +28,7 @@ class AnswersController < ApplicationController
       redirect_to @answer
     else
       render :edit
+    end
   end
 
   def destroy
@@ -36,16 +38,15 @@ class AnswersController < ApplicationController
 
   private
 
-    def find_question
-      @question = Question.find(params[:question_id])
-    end
-    # Use callbacks to share common setup or constraints between actions.
-    def set_answer
-      @answer = Answer.find(params[:id])
-    end
+  def find_question
+    @question = Question.find(params[:question_id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def answer_params
-      params.require(:answer).permit(:body, :correct)
-    end
+  def set_answer
+    @answer = Answer.find(params[:id])
+  end
+
+  def answer_params
+    params.require(:answer).permit(:body, :correct)
+  end
 end

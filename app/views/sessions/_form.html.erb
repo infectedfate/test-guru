@@ -1,0 +1,16 @@
+<%= form_with url: sessions_path, local: true do |form| %>
+
+  <p>
+    <%= form.label :mail %><br>
+    <%= form.text_field :mail, id: :mail %>
+  </p>
+
+  <p>
+  <%= form.label :password %><br>
+  <%= form.password_field :password, id: :password %>
+  </p>
+
+  <p>
+  <%= form.submit %>
+  </p>
+<% end %>

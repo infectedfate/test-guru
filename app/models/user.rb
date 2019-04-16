@@ -1,9 +1,13 @@
+require 'digest/sha1'
+
 class User < ApplicationRecord
+
+  validates :mail, uniqueness: true, format: { with: /.+@.+\..+/i }
+  
   has_many :test_passages
   has_many :tests, through: :test_passages
 
-  validates :name, presence: true
-  validates :mail, presence: true
+  has_secure_password
 
   def test_passage(test)
     test_passages.order(id: :desc).find_by(test_id: test.id)

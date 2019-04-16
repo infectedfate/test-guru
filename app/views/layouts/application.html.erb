@@ -10,8 +10,9 @@
   </head>
 
   <body>
+    <%= render 'shared/navbar' %>
+    <%= flash_messages %>
     <%= yield %>
-
-    <%= render 'shared/footer'%>
+    <%= render 'shared/footer' %>
   </body>
 </html>
