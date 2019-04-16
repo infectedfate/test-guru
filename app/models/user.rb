@@ -7,7 +7,7 @@ class User < ApplicationRecord
           :rememberable,
           :validatable
 
-  validates :mail, uniqueness: true, format: { with: /.+@.+\..+/i }
+  validates :email, uniqueness: true, format: { with: /.+@.+\..+/i }
   
   has_many :test_passages
   has_many :tests, through: :test_passages
