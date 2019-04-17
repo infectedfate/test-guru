@@ -1,0 +1,9 @@
+<li>
+    <%= answer.body %> 
+    <%= link_to 'Вход', admin_answer_path(answer) %> 
+    <%= link_to 'Редактировать', edit_admin_answer_path(answer) %> 
+    <%= link_to 'Удалить',
+                admin_answer_path(answer),
+                method: :delete,
+                data: { confirm: 'Are you shure?' } %>
+</li>

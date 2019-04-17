@@ -1,6 +1,5 @@
-class QuestionsController < ApplicationController
+class Admin::QuestionsController < Admin::BaseController
 
-  before_action :authenticate_user!
   before_action :set_test, only: %i[create new]
   before_action :set_question, only: %i[edit show destroy update]
 
@@ -19,18 +18,27 @@ class QuestionsController < ApplicationController
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-      redirect_to @question.test
+      redirect_to admin_test_path(@test)
     else
       render :new
     end
   end
+
+  def update
+    if @question.update(question_params)
+      redirect_to admin_test_path(@question.test)
+    else
+      render :edit
+    end
+  end
+  
 
   def edit
   end
 
   def destroy
     @question.destroy
-    redirect_to tests_questions_path
+    redirect_to admin_test_path(@question.test)
   end
 
   private
@@ -38,10 +46,6 @@ class QuestionsController < ApplicationController
   def question_params
     params.require(:question).permit(:body, :test_id)
   end
-
-  #def question_not_found
-   # render plain: 'Вопрос не существует.'
-  #end
 
   def set_test
     @test = Test.find(params[:test_id])
