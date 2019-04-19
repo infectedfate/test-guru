@@ -6,12 +6,11 @@
 <p>Вопрос номер:  <%= @test_passage.current_question.id %> из <%= @test_passage.test.questions.count %> </p>
 
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
-  <%= form.collection_check_boxes : do answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
+  <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
     <p>
     <%= b.check_box id: "answer_ids_#{b.object.id}" %>
     <%= b.label %>
     </p>
   <% end %>
-
   <p> <%= form.submit 'Следующий вопрос' %> </p>
 <% end %>

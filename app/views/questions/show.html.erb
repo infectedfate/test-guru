@@ -12,5 +12,5 @@
 <%= render @question.answers %>
 </ol>
 
-<%= link_to 'Редактировать', edit_question_path(@question) %>
-<%= link_to 'Назад', test_path(@question.test) %>
+<%= link_to 'Редактировать', edit_question_path(@question) %> |
+<%= link_to 'Назад', admin_test_path(@question.test) %>

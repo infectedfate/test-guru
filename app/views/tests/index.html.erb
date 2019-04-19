@@ -1,16 +1,11 @@
 <h1>Тесты</h1>
 
-<p>
-  <%= link_to 'Создать тест', new_test_path %>
-</p>
-
 <table>
   <tr>
     <th>Название</th>
     <th>Уровень</th>
     <th>Количество вопросов</th>
-    <th colspan="4">Действия</th>
-  </tr>
+    </tr>
 
   <%= render @tests %>
 </table>

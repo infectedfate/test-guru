@@ -1,13 +1,17 @@
-require 'digest/sha1'
 
 class User < ApplicationRecord
 
-  validates :mail, uniqueness: true, format: { with: /.+@.+\..+/i }
-  
+  devise :database_authenticatable, 
+          :registerable,
+          :recoverable,
+          :rememberable,
+          :validatable
+
+  validates :email, uniqueness: true, format: { with: /.+@.+\..+/i }
+
+  has_many :tests_author, class_name: 'Test', foreign_key: :author_id
   has_many :test_passages
   has_many :tests, through: :test_passages
-
-  has_secure_password
 
   def test_passage(test)
     test_passages.order(id: :desc).find_by(test_id: test.id)
