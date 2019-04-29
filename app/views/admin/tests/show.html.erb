@@ -12,7 +12,7 @@
 <%= link_to t('.create_question'), new_admin_test_question_path(@test) %>
 <p>
   <strong> <%= t('.questions_list') %> </strong>
-  <%= render partial: 'questions/question', collection: @test.questions %>
+  <%= render partial: 'admin/questions/question', collection: @test.questions %>
 </p>
 
 <%= link_to t('.edit'), edit_admin_test_path(@test) %>
