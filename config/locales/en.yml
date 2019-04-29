@@ -15,7 +15,6 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
-
   tests:
     index:
       header: "Tricky tests"
@@ -28,7 +27,6 @@ en:
     result:
       header: "Тест %{title} successfully done"
       back: "Back"
-
   shared:
     errors:
       header:
@@ -98,7 +96,6 @@ en:
         back: "Back"
       edit:
         back: "Back"
-
   tests_mailer:
     completed_tests:
       subject: "You just completed the TestGuru test"
