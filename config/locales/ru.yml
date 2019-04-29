@@ -86,7 +86,7 @@ ru:
         delete_confirmation: "Вы уверены?"
     questions:
       show:
-        body: "Текст вопроса"
+        body: "Содержание вопроса"
         new_answer: "Новый ответ"
         edit: "Редактировать вопрос"
         answers: "Ответы"
