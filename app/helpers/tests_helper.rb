@@ -1,5 +1,4 @@
 module TestsHelper
-
     def test_level(test)
       case test.level
       when 1 then t('.difficulty_level.easy')
@@ -8,5 +7,4 @@ module TestsHelper
       else t('.difficulty_level.hero')
       end
     end
-
 end

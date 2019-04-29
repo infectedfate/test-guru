@@ -51,7 +51,7 @@ ru:
       hero: "Героический"
   admin:
     nav:
-      loout: "Выход"
+      logout: "Выход"
       adminpanel: "Административная панель TestGuru"
     tests:
       create:
@@ -65,6 +65,10 @@ ru:
         actions: "Действия"
       test:
         start: "Начать тест"
+        enter: "Войти"
+        edit: "Редактировать"
+        back: "Назад"
+        delete_confirmation: "Вы уверены?"
       show:
         create_question: "Создать вопрос"
         back: "Назад"
