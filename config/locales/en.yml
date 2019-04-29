@@ -27,6 +27,7 @@ en:
   test_passages:
     result:
       header: "Тест %{title} successfully done"
+      back: "Back"
 
   shared:
     errors:

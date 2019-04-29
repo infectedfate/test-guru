@@ -14,7 +14,9 @@ ru:
         level: "Уровень"
       user:
         name: "Имя"
-        mail: "Почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        email: "Почта"
       question:
         body: "Текст"
 

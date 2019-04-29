@@ -28,6 +28,7 @@ ru:
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
+      back: "Назад"
     show:
       qnumber: "Вопрос номер:"
       next_question: "Следующий вопрос"
