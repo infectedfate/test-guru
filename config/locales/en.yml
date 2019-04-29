@@ -61,9 +61,12 @@ en:
       test:
         start: "Start"
       show:
+        questions_list: "Questions list"
         create_question: "Create question"
         back: "Back"
         edit: "Edit"
+        level: "Level"
+        title: "Title"
       new:
         header: "Creating test"
         back: "Back"

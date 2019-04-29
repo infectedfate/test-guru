@@ -1,18 +1,17 @@
-
 <%= link_to t('.create_question'), new_admin_test_question_path(@test) %>
 
 <p>
-  <strong>Title:</strong>
+  <strong> <%= t('.title') %> </strong>
   <%= @test.title %>
 </p>
 
 <p>
-  <strong>Level:</strong>
+  <strong> <%= t('.level') %> </strong>
   <%= @test.level %>
 </p>
 <%= link_to t('.create_question'), new_admin_test_question_path(@test) %>
 <p>
-  <strong>Список вопросов:</strong>
+  <strong> <%= t('.questions_list') %> </strong>
   <%= render partial: 'questions/question', collection: @test.questions %>
 </p>
 

@@ -70,9 +70,12 @@ ru:
         back: "Назад"
         delete_confirmation: "Вы уверены?"
       show:
+        questions_list: "Список вопросов"
         create_question: "Создать вопрос"
         back: "Назад"
         edit: "Редактировать"
+        level: "Уровень"
+        title: "Название"
       new:
         header: "Создание теста"
         back: "Назад"
