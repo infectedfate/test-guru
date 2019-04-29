@@ -58,8 +58,19 @@ en:
         testname: "Test Title"
         level: "Level"
         quantity: "Quantity of questions"
+        new_test: "New test"
+        actions: "Actions"
       test:
         start: "Start"
+      show:
+        create_question: "Create question"
+        back: "Back"
+        edit: "Edit"
+      new:
+        header: "Creating test"
+        back: "Back"
+      edit:
+        back: "Back"
     answers:
       show:
         header: "Answer"

@@ -65,8 +65,19 @@ ru:
         testname: "Название"
         level: "Уровень"
         quantity: "Количество вопросов"
+        new_test: "Создать тест"
+        actions: "Действия"
       test:
         start: "Начать тест"
+      show:
+        create_question: "Создать вопрос"
+        back: "Назад"
+        edit: "Редактировать"
+      new:
+        header: "Создание теста"
+        back: "Назад"
+      edit:
+        back: "Назад"
     answers:
       show:
         header: "Ответ"
