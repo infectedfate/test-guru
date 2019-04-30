@@ -2,13 +2,25 @@ en:
   activerecord:
     models:
       test: "Test"
+      user: "User"
+      question: "Question"
+      category: "Category"
+      answer: "Answer"
 
     attributes:
       test:
         title: "Title"
         author: "Author"
+        level: "Level"
+      user:
+        name: "Name"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        email: "Email"
+      question:
+        body: "Text"
 
     errors:
       messages:
-        blank: "can't be blank"
+        blank: "cant be blank"
         required: "must exist"

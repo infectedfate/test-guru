@@ -1,15 +1,15 @@
-<h1>Тесты</h1>
+<h1><%= t('.header') %> </h1>
 
 <p>
-  <%= link_to 'Создать тест', new_admin_test_path %>
+  <%= link_to t('.new_test'), new_admin_test_path %>
 </p>
 
 <table>
   <tr>
-    <th>Название</th>
-    <th>Уровень</th>
-    <th>Количество вопросов</th>
-    <th colspan="4">Действия</th>
+    <th><%= t('.testname') %></th>
+    <th><%= t('.level') %></th>
+    <th><%= t('.quantity') %></th>
+    <th colspan="4"><%= t('.actions') %></th>
   </tr>
 
   <%= render @tests %>

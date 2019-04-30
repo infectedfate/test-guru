@@ -1,20 +1,19 @@
-
-<%= link_to 'Создать вопрос', new_admin_test_question_path(@test) %>
+<%= link_to t('.create_question'), new_admin_test_question_path(@test) %>
 
 <p>
-  <strong>Title:</strong>
+  <strong> <%= t('.title') %> </strong>
   <%= @test.title %>
 </p>
 
 <p>
-  <strong>Level:</strong>
+  <strong> <%= t('.level') %> </strong>
   <%= @test.level %>
 </p>
-<%= link_to 'New Question', new_admin_test_question_path(@test) %>
+<%= link_to t('.create_question'), new_admin_test_question_path(@test) %>
 <p>
-  <strong>Список вопросов:</strong>
-  <%= render partial: 'questions/question', collection: @test.questions %>
+  <strong> <%= t('.questions_list') %> </strong>
+  <%= render partial: 'admin/questions/question', collection: @test.questions %>
 </p>
 
-<%= link_to 'Редактировать', edit_admin_test_path(@test) %>
-<%= link_to 'Назад', admin_tests_path %>
+<%= link_to t('.edit'), edit_admin_test_path(@test) %>
+<%= link_to t('.back'), admin_tests_path %>

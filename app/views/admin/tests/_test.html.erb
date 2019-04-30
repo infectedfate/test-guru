@@ -2,11 +2,11 @@
   <td> <%= test.title %> </td>
   <td> <%= test_level(test) %> </td>
   <td> <%= test.questions.count %> </td>
-  <td> <%= link_to 'Вход', admin_test_path(test) %> </td>
-  <td> <%= link_to 'Редактировать', edit_admin_test_path(test) %> </td>
-  <td> <%= link_to 'Удалить',
+  <td> <%= link_to t('.enter'), admin_test_path(test) %> </td>
+  <td> <%= link_to t('.edit'), edit_admin_test_path(test) %> </td>
+  <td> <%= link_to t('.back'),
                     admin_test_path(test),
                     method: :delete,
-                    data: { confirm: 'Are you shure?' } %>
+                    data: { confirm: t('.delete_confirmation') } %>
   </td>
 </tr>

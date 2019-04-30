@@ -1,33 +1,104 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+      question:
+        create: "Create question"
+        update: "Update question"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+  tests:
+    index:
+      header: "Tricky tests"
+      testname: "Test Title"
+      level: "Level"
+      quantity: "Quantity of questions"
+    test:
+      start: "Start!"
+  test_passages:
+    result:
+      header: "Тест %{title} successfully done"
+      back: "Back"
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+    navbar:
+      login: "Login"
+      logout: "Logout"
+      sign_up: "Sign up"
+    footer:
+      description: "Service for creating and passing tests"
+      thinkneticalink: "Study project of Thinknetica developer school"
+    difficulty_level:
+      easy: "Easy"
+      medium: "Middle"
+      hard: "Hard"
+      hero: "Hero"
+  admin:
+    nav:
+      loout: "Logout"
+      adminpanel: "TestGuru admin panel "
+    tests:
+      create:
+        success: "Test succsessfully created"
+      index:
+        header: "Tricky Tests"
+        testname: "Test Title"
+        level: "Level"
+        quantity: "Quantity of questions"
+        new_test: "New test"
+        actions: "Actions"
+      test:
+        start: "Start"
+      show:
+        questions_list: "Questions list"
+        create_question: "Create question"
+        back: "Back"
+        edit: "Edit"
+        level: "Level"
+        title: "Title"
+      new:
+        header: "Creating test"
+        back: "Back"
+      edit:
+        back: "Back"
+    answers:
+      show:
+        header: "Answer"
+        answer: "Answer:"
+        correct: "Correct"
+        back: "Back"
+      edit:
+        header: "Edit answer"
+        show: "Show"
+        back: "Back"
+      new:
+        header: "New answer"
+        back: "Back"
+      answer:
+        enter: "Enter"
+        edit: "Edit answer"
+        delete: "Delete answer"
+        delete_confirmation: "Are You shure?"
+    questions:
+      show:
+        body: "Question text"
+        new_answer: "New answer"
+        answers: "Answers"
+        edit: "Edit question"
+        back: "Back"
+      edit:
+        back: "Back"
+  tests_mailer:
+    completed_tests:
+      subject: "You just completed the TestGuru test"

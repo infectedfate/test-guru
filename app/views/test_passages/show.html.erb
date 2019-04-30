@@ -3,7 +3,7 @@
 <b>
     <%= @test_passage.current_question.body %>
 </b>
-<p>Вопрос номер:  <%= @test_passage.current_question.id %> из <%= @test_passage.test.questions.count %> </p>
+<p> <%= t(.'qnumber') @test_passage.current_question.id %> из <%= @test_passage.test.questions.count %> </p>
 
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
@@ -12,5 +12,5 @@
     <%= b.label %>
     </p>
   <% end %>
-  <p> <%= form.submit 'Следующий вопрос' %> </p>
+  <p> <%= form.submit t(.'next_question') %> </p>
 <% end %>
