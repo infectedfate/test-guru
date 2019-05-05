@@ -1,10 +1,8 @@
 <%= link_to t('.create_question'), new_admin_test_question_path(@test) %>
-
 <p>
   <strong> <%= t('.title') %> </strong>
   <%= @test.title %>
 </p>
-
 <p>
   <strong> <%= t('.level') %> </strong>
   <%= @test.level %>
@@ -14,6 +12,5 @@
   <strong> <%= t('.questions_list') %> </strong>
   <%= render partial: 'admin/questions/question', collection: @test.questions %>
 </p>
-
 <%= link_to t('.edit'), edit_admin_test_path(@test) %>
 <%= link_to t('.back'), admin_tests_path %>
