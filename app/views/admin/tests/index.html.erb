@@ -1,8 +1,6 @@
-<div class="row justify-content-center mt-3">
+<div class="row justify-content-center mt-4">
   <h1><%= t('.header') %> </h1>
   <p>
-    <%= link_to t('.new_test'), new_admin_test_path %>
-  </p>
   <table class="table">
     <thead>
       <tr>
@@ -14,4 +12,8 @@
     </thead>
     <%= render @tests %>
   </table>
+  </p>
+  <p>
+    <%= link_to t('.new_test'), new_admin_test_path %>
+  </p>
 </div>

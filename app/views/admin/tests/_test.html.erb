@@ -4,7 +4,7 @@
   <td> <%= test.questions.count %> </td>
   <td> <%= link_to t('.enter'), admin_test_path(test) %> </td>
   <td> <%= link_to t('.edit'), edit_admin_test_path(test) %> </td>
-  <td> <%= link_to t('.back'),
+  <td> <%= link_to t('.delete'),
                     admin_test_path(test),
                     method: :delete,
                     data: { confirm: t('.delete_confirmation') } %>
