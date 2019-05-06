@@ -1,3 +1,11 @@
-<%= question_header(@question) %>
-<%= render 'form' %>
-<%= link_to 'Назад', admin_tests_path %>
+<div class="row justify-content-center mt-3">
+    <div class="col col-md-4">
+        <%= question_header(@question) %>
+        <div class="card border-primary">
+            <div class="card-body">
+                <%= render 'form' %>
+            </div>
+                <%= link_to t('.back'), admin_tests_path %>
+        </div>
+    </div>
+</div>

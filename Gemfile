@@ -31,6 +31,10 @@ gem 'devise', '~> 4.0'
 
 gem 'rails-i18n', '~> 5.0.0'
 
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.0.0'
+gem "bootstrap_form", ">= 4.2.0"
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
