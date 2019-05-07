@@ -4,8 +4,8 @@ categories = Category.create(
 )
 
 users = User.create(
-  [{ mail: 'first@mail.com', name: :firstuser },
-   { mail: 'second@mail.com', name: :seconduser }]
+  [{ email: 'first@mail.com', name: :firstuser },
+   { email: 'second@mail.com', name: :seconduser }]
 )
 
 tests = Test.create(
