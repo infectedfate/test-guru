@@ -37,6 +37,7 @@ gem 'bootstrap_form', '>= 4.2.0'
 
 gem 'faraday'
 
+gem "octokit", "~> 4.0"
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
