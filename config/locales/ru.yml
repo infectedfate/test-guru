@@ -1,4 +1,7 @@
 ru:
+  
+  gist_description: "%{test_title} вопрос от TestGuru"
+
   tests:
     index:
       header: "Доступные тесты"
@@ -30,6 +33,10 @@ ru:
     show:
       qnumber: "Вопрос номер:"
       next_question: "Следующий вопрос"
+    gist:
+      back: "Назад"
+      success: "Gist успешно сохранен. %{url}"
+      failed: "При сохранении gist произошла ошибка"
   shared:
     errors:
       header:

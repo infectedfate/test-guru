@@ -15,7 +15,7 @@ class TestPassagesController < ApplicationController
     
     flash_options = if service.success?
       gist_link(gist_url)
-      { notice: t('.success'), url: gist_url }
+      { notice: t('.success', url: gist_url) }
     else
       { alert: t('.failure') }
     end
