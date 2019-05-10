@@ -3,4 +3,8 @@ class Question < ApplicationRecord
   has_many :answers
 
   validates :body, presence: true
+
+  def short
+    body.trancate(24)
+  end
 end
