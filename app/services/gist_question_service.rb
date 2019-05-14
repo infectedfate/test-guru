@@ -23,6 +23,11 @@ class GistQuestionService
     }
   end
 
+  def created_code?
+    @client.last_response.status == 201
+  end
+
+
   def gist_content
     content = [@question.body]
     content += @question.answers.pluck(:body)

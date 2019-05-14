@@ -13,8 +13,8 @@ class TestPassagesController < ApplicationController
     service = GistQuestionService.new(@test_passage.current_question).call
     gist_url = response.html_url
     
-    flash_options = if service.success?
-      gist_link(gist_url)
+    flash_options = if service.created_code?
+      create_gist_link(gist_url)
       { notice: t('.success', url: gist_url) }
     else
       { alert: t('.failure') }
@@ -37,7 +37,7 @@ class TestPassagesController < ApplicationController
 
   private
 
-  def gist_link(gist_url)
+  def create_gist_link(gist_url)
     current_user.gists.create(question: @test_passage.current_question, url: gist_url)
   end
 
