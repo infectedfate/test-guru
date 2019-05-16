@@ -40,6 +40,7 @@ gem 'faraday'
 gem "octokit", "~> 4.0"
 
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'pry-rails'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
