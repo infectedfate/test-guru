@@ -1,11 +1,17 @@
 <div class="row justify-content-center mt-3">
   <h1><%= t('.header') %></h1>
   <table class="table">
+  <thead>
     <tr>
-      <th><%= t('.testname') %></th> 
+      <th class="sort-by-title pointer">
+      <%= t('.testname') %>
+      <%= octicon 'arrow-up', class: 'text-success hide'%>
+      <%= octicon 'arrow-down', class: 'text-success hide'%>
+      </th> 
       <th><%= t('.level') %></th>
       <th><%= t('.quantity') %></th>
     </tr>
+  </thead>
     <%= render @tests %>
   </table>
 </div>
