@@ -32,7 +32,7 @@ gem 'devise', '~> 4.0'
 gem 'rails-i18n', '~> 5.0.0'
 
 gem 'jquery-rails'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.3.1'
 gem 'bootstrap_form', '>= 4.2.0'
 
 gem 'faraday'
@@ -40,6 +40,8 @@ gem 'faraday'
 gem "octokit", "~> 4.0"
 
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'pry-rails'
+gem 'octicons_helper'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
