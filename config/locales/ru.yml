@@ -8,35 +8,44 @@ ru:
       testname: "Название"
       level: "Уровень"
       quantity: "Количество вопросов"
+
     test:
       start: "Начать тест"
+
   helpers:
     submit:
       test:
         create: "Создать тест"
         update: "Обновить тест"
+
       question:
         create: "Создать вопрос"
         update: "Обновить вопрос"
+
       answer:
         create: "Создать ответ"
         update: "Обновить ответ"
+
     label:
       test:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
       back: "Назад"
+
     show:
       qnumber: "Вопрос номер:"
       next_question: "Следующий вопрос"
+
     gist:
       back: "Назад"
       success: "Gist успешно сохранен. %{url}"
       failed: "При сохранении gist произошла ошибка"
+
   shared:
     errors:
       header:
@@ -44,25 +53,33 @@ ru:
         other: "Обнаружено %{count} ошибок"
         few: "Обнаружено %{count} ошибки"
         many: "Обнаружено %{count} ошибок"
+
     navbar:
       login: "Войти"
       logout: "Выход"
       sign_up: "Зарегистрироваться"
+
     footer:
       description: "Сервис для создания и прохождения тестов"
       thinkneticalink: "Учебный проект школы Thinknetica"
+      
     difficulty_level:
       easy: "Легкий"
       medium: "Средний"
       hard: "Сложный"
       hero: "Героический"
+
   admin:
+
     nav:
       logout: "Выход"
       adminpanel: "Административная панель TestGuru"
+
     tests:
+
       create:
         success: "Тест успешно создан"
+
       index:
         header: "Доступные тесты"
         testname: "Название"
@@ -70,6 +87,7 @@ ru:
         quantity: "Количество вопросов"
         new_test: "Создать тест"
         actions: "Действия"
+
       test:
         start: "Начать тест"
         enter: "Войти"
@@ -77,6 +95,10 @@ ru:
         back: "Назад"
         delete: "Удалить"
         delete_confirmation: "Вы уверены?"
+
+      form_inline:
+        submit: "OK"
+
       show:
         questions_list: "Список вопросов"
         create_question: "Создать вопрос"
@@ -85,29 +107,36 @@ ru:
         level: "Уровень"
         title: "Название"
         actions: "Действия"
+
       new:
         header: "Создание теста"
         back: "Назад"
+
       edit:
         back: "Назад"
+
     answers:
       show:
         header: "Ответ"
         answer: "Ответ:"
         corret: "правильный ответ"
         back: "Назад"
+
       edit:
         header: "Редактирование ответа"
         show: "Показать"
         back: "Назад"
+
       new:
         header: "Новый ответ"
         back: "Назад"
+
       answer:
         enter: "Вход"
         edit: "Редактировать ответ"
         delete: "Удалить ответ"
         delete_confirmation: "Вы уверены?"
+
     questions:
       show:
         body: "Содержание вопроса"
@@ -115,12 +144,15 @@ ru:
         edit: "Редактировать вопрос"
         answers: "Ответы"
         back: "Назад"
+
       edit:
         back: "Назад"
+
       question:
         show: "Показать"
         edit: "Редактировать"
         delete: "Удалить"
+
   tests_mailer:
     completed_tests:
       subject: "Вы успешно завершили тест на TestGuru"

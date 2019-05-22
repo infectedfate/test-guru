@@ -72,6 +72,8 @@ en:
         back: "Back"
       edit:
         back: "Back"
+      form_inline:
+        submit: "OK"
     answers:
       show:
         header: "Answer"
