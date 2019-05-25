@@ -25,6 +25,10 @@ class TestPassage < ApplicationRecord
   def successfully_completed?
     correct_answers_percent >= SUCCESS_PERSENT
   end
+
+  def current_question_number
+    test.questions.index(current_question) + 1
+  end
   
   private
 

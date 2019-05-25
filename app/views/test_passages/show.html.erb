@@ -1,14 +1,17 @@
 <div class="row justify-content-center mt-3">
   <div class="col col-md-6">
     <h1> Прохождение <%= @test_passage.test.title %> теста </h1>
+    <%= render 'progress_bar'%>
   <p>
     <b><%= @test_passage.current_question.body %></b>
   </p>
-  <h2> <%= @test_passage.current_question.id %> из <%= @test_passage.test.questions.count %> </h2>
+  <h2> <%= @test_passage.current_question_number %> из <%= @test_passage.test.questions.count %> </h2>
     <div class="card">
+    
       <div class="card-header">
         <%= @test_passage.current_question.body%>
       </div>
+
     <ul class="list-group list-group-flush">
     <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
       <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
