@@ -7,7 +7,9 @@
 default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  encoding: unicode 
+  encoding: unicode
+  host: localhost
+
 
 development:
   <<: *default
@@ -22,4 +24,4 @@ test:
 
 production:
   <<: *default
-  database: test_guru_production 
+  database: test_guru_production
