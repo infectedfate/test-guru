@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_05_09_193747) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
     t.boolean "correct", default: false
@@ -43,8 +46,8 @@ ActiveRecord::Schema.define(version: 2019_05_09_193747) do
   end
 
   create_table "test_passages", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "test_id"
+    t.bigint "user_id"
+    t.bigint "test_id"
     t.integer "current_question_id"
     t.integer "correct_question", default: 0
     t.datetime "created_at", null: false
@@ -90,4 +93,6 @@ ActiveRecord::Schema.define(version: 2019_05_09_193747) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "test_passages", "tests"
+  add_foreign_key "test_passages", "users"
 end
