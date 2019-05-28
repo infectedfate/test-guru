@@ -6,12 +6,12 @@ class FeedbackMailer < ApplicationMailer
     @subject = feedback.title
     @message = feedback.body
 
-     mail to: @admin.email, from: @user.email, subject: @subject
+    mail to: @admin.email, from: @user.email, subject: @subject
   end
 
-   private
+  private
 
-   def find_admin
+  def find_admin
     @admin = Admin.first
-   end
+  end
 end
