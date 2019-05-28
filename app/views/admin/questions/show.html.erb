@@ -3,12 +3,12 @@
   <strong> <%= t('.body') %></strong>
   <%= @question.body %>
 </p>
-<%= t('.answers') %>
 <table class="table">
   <thead>
-  <%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
+<%= t('.answers') %>
   </thead>
   <%= render @question.answers %>
 </table>
+<%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
 <%= link_to t('.edit'), edit_admin_question_path(@question) %> |
 <%= link_to t('.back'), admin_test_path(@question.test) %>
