@@ -8,8 +8,10 @@
   </head>
   <body>
     <%= render 'admin/nav' %>
+    <div class="container">
     <%= flash_messages %>
     <%= yield %>
     <%= render 'shared/footer'%>
+    </div>
   </body>
 </html>
