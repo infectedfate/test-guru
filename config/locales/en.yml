@@ -47,6 +47,7 @@ en:
       hero: "Hero"
   admin:
     nav:
+      home: "Tests page"
       header: "Admin panel"
       loout: "Logout"
       adminpanel: "TestGuru admin panel "
