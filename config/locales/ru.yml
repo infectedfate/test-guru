@@ -13,10 +13,14 @@ ru:
       start: "Начать тест"
 
   helpers:
+
     submit:
       test:
         create: "Создать тест"
         update: "Обновить тест"
+
+      feedback:
+        create: "Оставить отзыв"
 
       question:
         create: "Создать вопрос"
@@ -31,6 +35,9 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+      feedback:
+        title: "Тема"
+        body: "Сообщение"
 
   test_passages:
     result:
@@ -63,12 +70,18 @@ ru:
     footer:
       description: "Сервис для создания и прохождения тестов"
       thinkneticalink: "Учебный проект школы Thinknetica"
+      feedback: "Отзыв"
       
     difficulty_level:
       easy: "Легкий"
       medium: "Средний"
       hard: "Сложный"
       hero: "Героический"
+
+  feedbacks:
+    new:
+      header: "Отзыв"
+      back: "Назад"
 
   admin:
 

@@ -1,6 +1,8 @@
 en:
   helpers:
     submit:
+      feedback:
+        create: "Create feedback"
       test:
         create: "Create test"
         update: "Update test"
@@ -15,6 +17,8 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+      feedback:
+        Title: "Title"
   tests:
     index:
       header: "Tricky tests"
@@ -40,11 +44,17 @@ en:
     footer:
       description: "Service for creating and passing tests"
       thinkneticalink: "Study project of Thinknetica developer school"
+      feedback: "Feedback"
     difficulty_level:
       easy: "Easy"
       medium: "Middle"
       hard: "Hard"
       hero: "Hero"
+
+    feedbacks:
+      new:
+        header: "Header"
+        back: "Back"
   admin:
     nav:
       home: "Tests page"
