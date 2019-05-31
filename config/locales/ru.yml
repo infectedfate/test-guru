@@ -55,6 +55,7 @@ ru:
         many: "Обнаружено %{count} ошибок"
 
     navbar:
+      header: "Административная панель"
       login: "Войти"
       logout: "Выход"
       sign_up: "Зарегистрироваться"
@@ -72,6 +73,8 @@ ru:
   admin:
 
     nav:
+      header:
+        header: "Административная панель"
       logout: "Выход"
       adminpanel: "Административная панель TestGuru"
 

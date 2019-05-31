@@ -33,6 +33,7 @@ en:
         one: "%{count} error detected"
         other: "%{count} errors detected"
     navbar:
+      header: "Admin panel"
       login: "Login"
       logout: "Logout"
       sign_up: "Sign up"
@@ -46,6 +47,7 @@ en:
       hero: "Hero"
   admin:
     nav:
+      header: "Admin panel"
       loout: "Logout"
       adminpanel: "TestGuru admin panel "
     tests:
