@@ -3,7 +3,7 @@ class GistQuestionService
   def initialize(question, client: nil)
     @question = question
     @test = @question.test
-    @client = client || Octokit::Client.new(access_token: ENV[GITHUB_GISTS_TOKEN])
+    @client = client || Octokit::Client.new(access_token: ENV['GITHUB_GISTS_TOKEN'])
   end
 
   def call
@@ -26,7 +26,6 @@ class GistQuestionService
   def created_code?
     @client.last_response.status == 201
   end
-
 
   def gist_content
     content = [@question.body]
