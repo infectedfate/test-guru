@@ -9,7 +9,11 @@ class GistQuestionService
   def call
     @client.create_gist(gist_params)
   end
-
+  
+  def created_code?
+    @client.last_response.status == 201
+  end
+  
   private
   
   def gist_params
@@ -23,9 +27,6 @@ class GistQuestionService
     }
   end
 
-  def created_code?
-    @client.last_response.status == 201
-  end
 
   def gist_content
     content = [@question.body]
