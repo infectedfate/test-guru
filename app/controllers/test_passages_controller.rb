@@ -10,7 +10,8 @@ class TestPassagesController < ApplicationController
   end
 
   def gist
-    service = GistQuestionService.new(@test_passage.current_question).call
+    service = GistQuestionService.new(@test_passage.current_question)
+    response = service.call
     gist_url = response.html_url
     
     flash_options = if service.created_code?
