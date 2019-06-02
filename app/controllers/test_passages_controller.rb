@@ -21,7 +21,7 @@ class TestPassagesController < ApplicationController
       { alert: t('.failure') }
     end
     
-    redirect_to @test_passages, flash_options
+    redirect_to @test_passage, flash_options
   end
   
 
