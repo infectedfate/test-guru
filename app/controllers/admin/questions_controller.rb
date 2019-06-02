@@ -3,7 +3,7 @@ class Admin::QuestionsController < Admin::BaseController
   before_action :set_test, only: %i[create new]
   before_action :set_question, only: %i[edit show destroy update]
 
-  #rescue_from ActiveRecord::RecordNotFound, with: :question_not_found
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
   end
@@ -44,7 +44,7 @@ class Admin::QuestionsController < Admin::BaseController
   private
 
   def question_params
-    params.require(:question).permit(:body, :test_id)
+    params.require(:question).permit(:body)
   end
 
   def set_test
@@ -53,5 +53,9 @@ class Admin::QuestionsController < Admin::BaseController
 
   def set_question
     @question = Question.find(params[:id])
+  end
+
+  def rescue_with_question_not_found
+    render plain: 'Вопрос не найден'
   end
 end
