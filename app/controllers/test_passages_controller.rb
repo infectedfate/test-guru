@@ -10,7 +10,8 @@ class TestPassagesController < ApplicationController
   end
 
   def gist
-    service = GistQuestionService.new(@test_passage.current_question).call
+    service = GistQuestionService.new(@test_passage.current_question)
+    response = service.call
     gist_url = response.html_url
     
     flash_options = if service.created_code?
@@ -20,15 +21,15 @@ class TestPassagesController < ApplicationController
       { alert: t('.failure') }
     end
     
-    redirect_to @test_passages, flash_options
+    redirect_to @test_passage, flash_options
   end
   
 
   def update
-    @test_passages.accept!(params[:answer_ids])
+    @test_passage.accept!(params[:answer_ids])
 
     if @test_passage.completed?
-      TestMailer.completed_test(@test_passage).deliver_now
+      TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
     else
       render :show

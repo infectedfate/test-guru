@@ -1,8 +1,10 @@
-<nav class="navbar navbar-dark bg-dark">
-  <span class="navbar-brand"><%= t('.adminpanel') %></span>
-    <ul class="nav navbar-nav"> 
-    <li>Welcome, <b class="nav-admin user-email"><%= current_user.email %></b> Guru</li>
-    <li><%= link_to t('.logout'), destroy_user_session_path, method: :delete %></li>
-    <li><%= link_to 'Gists', admin_gists_path %></li>
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand">
+    <%= t('.adminpanel') %>
+  </span>
+    <%= link_to t('.home'), root_path, class: 'nav-item nav-link' %>
+    <ul class="nav nav-pills"> 
+    <%= link_to t('.gists'), admin_gists_path, class: "btn" %></li>
+    <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: "btn" %></li>
     </ul>
 </nav>

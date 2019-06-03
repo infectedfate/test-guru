@@ -1,6 +1,8 @@
 en:
   helpers:
     submit:
+      feedback:
+        create: "Create feedback"
       test:
         create: "Create test"
         update: "Update test"
@@ -15,6 +17,8 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+      feedback:
+        Title: "Title"
   tests:
     index:
       header: "Tricky tests"
@@ -33,19 +37,28 @@ en:
         one: "%{count} error detected"
         other: "%{count} errors detected"
     navbar:
+      header: "Admin panel"
       login: "Login"
       logout: "Logout"
       sign_up: "Sign up"
     footer:
       description: "Service for creating and passing tests"
       thinkneticalink: "Study project of Thinknetica developer school"
+      feedback: "Feedback"
     difficulty_level:
       easy: "Easy"
       medium: "Middle"
       hard: "Hard"
       hero: "Hero"
+
+    feedbacks:
+      new:
+        header: "Header"
+        back: "Back"
   admin:
     nav:
+      home: "Tests page"
+      header: "Admin panel"
       loout: "Logout"
       adminpanel: "TestGuru admin panel "
     tests:

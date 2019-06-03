@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+  <meta name="viewport" content="width=devise-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
   <head>
     <title>Admin Panel | TestGuru</title>
     <%= csrf_meta_tags %>
@@ -8,8 +10,10 @@
   </head>
   <body>
     <%= render 'admin/nav' %>
+    <div class="container">
     <%= flash_messages %>
     <%= yield %>
     <%= render 'shared/footer'%>
+    </div>
   </body>
 </html>

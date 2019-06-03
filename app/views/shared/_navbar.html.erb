@@ -1,12 +1,17 @@
 <nav class="navbar navbar-light bg-light">
-  <h1><%= link_to "TestGuru", root_path, class: 'navbar-brand' %></h1>
+  <h1>
+    <%= link_to "TestGuru", root_path, class: 'navbar-brand' %>
+  </h1>
+  <% if current_user && current_user.is_a?(Admin) %>
+  <%= link_to t('.header'), admin_tests_path, class: 'nav-item nav-link' %>
+  <% end %>
     <span class="navbar-text">
-    <% if user_signed_in? %>
+      <% if user_signed_in? %>
       Welcome, <b><%= current_user.email %></b> Guru |
-    <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
-    <% else %>
-    <%=link_to t('.login'), new_user_session_path %> |
-    <%=link_to t('.sign_up'), new_user_registration_path %>
-    <% end %>
-  </span>
+      <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
+      <% else %>
+      <%=link_to t('.login'), new_user_session_path %> |
+      <%=link_to t('.sign_up'), new_user_registration_path %>
+      <% end %>
+    </span>
 </nav>

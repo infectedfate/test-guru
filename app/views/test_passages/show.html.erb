@@ -11,7 +11,7 @@
       <div class="card-header">
         <%= @test_passage.current_question.body%>
       </div>
-
+  <% if @test_passage.current_question.answers.count > 0 %>
     <ul class="list-group list-group-flush">
     <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
       <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
@@ -24,7 +24,8 @@
         <% end %>
     </ul>
     <p><%= link_to t('.gist_question'), gist_test_passage_path(@test_passage), method: :post %></p>
-    <%= form.submit t('.next_question'), class: 'btn btn-primary' %>
+    <p><%= form.submit t('.next_question'), class: 'btn btn-primary' %></p>
+    <% end %>
     <% end %>
     </div>
   </div>

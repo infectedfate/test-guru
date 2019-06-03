@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_09_193747) do
+ActiveRecord::Schema.define(version: 2019_06_02_124310) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
@@ -26,9 +29,18 @@ ActiveRecord::Schema.define(version: 2019_05_09_193747) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "feedbacks", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "title", null: false
+    t.text "body", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_feedbacks_on_user_id"
+  end
+
   create_table "gists", force: :cascade do |t|
-    t.integer "user_email"
-    t.integer "question"
+    t.integer "user_id"
+    t.integer "question_id"
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -43,12 +55,12 @@ ActiveRecord::Schema.define(version: 2019_05_09_193747) do
   end
 
   create_table "test_passages", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "test_id"
+    t.bigint "user_id"
+    t.bigint "test_id"
     t.integer "current_question_id"
-    t.integer "correct_question", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "correct_answers", default: 0
     t.index ["current_question_id"], name: "index_test_passages_on_current_question_id"
     t.index ["test_id"], name: "index_test_passages_on_test_id"
     t.index ["user_id"], name: "index_test_passages_on_user_id"
@@ -90,4 +102,7 @@ ActiveRecord::Schema.define(version: 2019_05_09_193747) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "feedbacks", "users"
+  add_foreign_key "test_passages", "tests"
+  add_foreign_key "test_passages", "users"
 end
