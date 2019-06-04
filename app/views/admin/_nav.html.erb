@@ -4,6 +4,7 @@
   </span>
     <%= link_to t('.home'), root_path, class: 'nav-item nav-link' %>
     <ul class="nav nav-pills"> 
+    <%= link_to t('.badges'), admin_badges_path, class: 'btn' %>
     <%= link_to t('.gists'), admin_gists_path, class: "btn" %></li>
     <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: "btn" %></li>
     </ul>
