@@ -14,7 +14,7 @@ class Admin::BadgesController < Admin::BaseController
    def create
     @badge = Badge.new(badge_params)
 
-     if @badge.save
+    if @badge.save
       redirect_to admin_badges_path
     else
       render :new
@@ -32,7 +32,7 @@ class Admin::BadgesController < Admin::BaseController
    def destroy
     @badge.destroy
 
-     redirect_to admin_badges_path
+    redirect_to admin_badges_path
   end
 
    private

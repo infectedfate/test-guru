@@ -1,7 +1,7 @@
 <tr>
    <td><%= image_tag badge.image_path, size: "32x32"%></td>
    <td><%= badge.title %></td>
-   <td>#todo: rule</td>
+   <td><%= badge.assigment_rule %> </td>
    <td><%= link_to t('.show'), admin_badge_path(badge) %></td>
    <td><%= link_to t('.edit'), edit_admin_badge_path(badge) %></td>
    <td>

@@ -13,7 +13,7 @@ class Badge < ApplicationRecord
 
  
   validates :title, presence: true
-  validates :path, presence: true		   
+  validates :image_path, presence: true		   
   validates :assigment_rule, presence: true
 
   def self.images
