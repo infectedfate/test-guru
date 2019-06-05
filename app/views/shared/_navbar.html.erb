@@ -4,9 +4,9 @@
   </h1>
   <% if current_user && current_user.is_a?(Admin) %>
     <%= link_to t('.header'), admin_tests_path, class: 'nav-item nav-link' %>
-    <%= link_to t('.badges'), badges_path, class: 'nav-item nav-link' %>
-
   <% end %>
+
+    <%= link_to t('.badges'), badges_path, class: 'nav-item nav-link' %>
     <span class="navbar-text">
       <% if user_signed_in? %>
       Welcome, <b><%= current_user.email %></b> Guru |

@@ -3,7 +3,7 @@ class BadgesController < ApplicationController
 
   def index
     @available_badges = Badge.all
-    @badges = current_user.badges    
+    @user_badges = current_user.badges
   end
   
 end
