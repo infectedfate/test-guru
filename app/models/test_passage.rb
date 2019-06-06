@@ -15,8 +15,9 @@ class TestPassage < ApplicationRecord
 
 
   def accept!(answer_ids)
-      self.correct_answers += 1 if correct_answer?(answer_ids)
-      raise NoObject unless save!
+    self.correct_answers += 1 if correct_answer?(answer_ids);
+    raise NoObject unless save!
+    end
   end
 
   def completed?
