@@ -16,8 +16,7 @@ class TestPassage < ApplicationRecord
 
   def accept!(answer_ids)
     self.correct_answers += 1 if correct_answer?(answer_ids);
-    raise NoObject unless save!
-    end
+    save!
   end
 
   def completed?
@@ -34,10 +33,6 @@ class TestPassage < ApplicationRecord
 
   def current_question_number
     test.questions.index(current_question) + 1
-  end
-
-  rescue NoObject
-    render self.errors
   end
 
   private
