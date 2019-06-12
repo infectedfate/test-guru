@@ -14,6 +14,9 @@ ru:
 
   helpers:
 
+    header:
+      badges: "Награды"
+
     submit:
       test:
         create: "Создать тест"
@@ -173,4 +176,8 @@ ru:
   tests_mailer:
     completed_tests:
       subject: "Вы успешно завершили тест на TestGuru"
+
+  badges:
+    index:
+      header: "Ваши награды"
 

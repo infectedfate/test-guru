@@ -1,5 +1,7 @@
 en:
   helpers:
+    header:
+      badges: "Badges"
     submit:
       feedback:
         create: "Create feedback"
@@ -117,3 +119,6 @@ en:
   tests_mailer:
     completed_tests:
       subject: "You just completed the TestGuru test"
+  badges:
+    index:
+      header: "Your Badges"

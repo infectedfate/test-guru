@@ -19,6 +19,8 @@ ru:
         email: "Почта"
       question:
         body: "Текст"
+      badge:
+        assigment_rule: "Правило награждения"
 
     errors:
       messages:
