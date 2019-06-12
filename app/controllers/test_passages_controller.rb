@@ -48,7 +48,7 @@ class TestPassagesController < ApplicationController
     @test_passage = TestPassage.find(params[:id])
   end
 
-  def awarded_badges!
+  def awarded_badges
     badge_service = BadgeService.new(@test_passage)
     badge_service.awarded_badges!
     current_user.badges.push(badge_service.badges)

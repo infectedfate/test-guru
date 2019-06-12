@@ -1,8 +1,8 @@
 class Badge < ApplicationRecord
   BADGES_TYPE = {
-    'Прохождение всех тестов категории' => :all_category_tests,
-    'Прохождение теста с первой попытки' => :test_first_try,
-    'Прохождение всех тестов определнного уровня' => :all_level_tests
+    I18n.t(:all_category) => :all_category_tests,
+    I18n.t(:first_try) => :test_first_try,
+    I18n.t(:all_level) => :all_level_tests
   }.freeze
 
   before_save :set_image_path
@@ -10,7 +10,6 @@ class Badge < ApplicationRecord
   has_many :users_badges
   has_many :users, through: :users_badges
   belongs_to :category, class_name: 'Category', optional: true
-
  
   validates :title, presence: true
   validates :image_path, presence: true		   

@@ -8,7 +8,7 @@ class BadgeService
     @badges = []
   end
  
-  def awarded_badges!
+  def awarded_badges
     Badge.all.each do |badge|
       award(badge) if send("#{badge.assigment_rule}_passed?", badge.level || badge.category)
     end
